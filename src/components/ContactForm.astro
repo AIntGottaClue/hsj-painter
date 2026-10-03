@@ -1,0 +1,14 @@
+---
+import site from '../data/site.json';
+const { title = 'Get A Free Quote', subtitle = '' } = Astro.props;
+---
+<h3>{title}</h3>
+{subtitle && <span class="subtitle">{subtitle}</span>}
+<form class="cp-form acf-form" method="post" action={site.formAction || '#'}>
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="tel" name="phone" placeholder="Phone" />
+  <input type="email" name="email" placeholder="Email" />
+  <textarea name="message" rows="4" placeholder="How can we help?"></textarea>
+  <button type="submit" class="acf-button button button-primary">Submit</button>
+  <div class="cp-form-msg alert alert-success" role="alert" style="display:none;margin-top:10px">Demo form: set formAction in src/data/site.json to a form service to receive messages.</div>
+</form>

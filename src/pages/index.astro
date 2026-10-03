@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import Sections from '../components/Sections.astro';
+import ContactForm from '../components/ContactForm.astro';
+import site from '../data/site.json';
+import pages from '../data/pages.json';
+import { fix } from '../lib';
+const home = pages.find((p) => p.slug === 'home');
+const bs = import.meta.env.BASE_URL;
+---
+<Base title={site.name} description={site.tagline} bodyClass="home">
+  <section><div id="cp-banner">
+    <div class="hero-fallback" style={`background-image:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url('${bs}${site.heroImage}')`}>
+      <div class="cp-banner-content" style="width:100%"><div class="inner"><div class="row align-items-center">
+        <div class="col-lg-7"><div class="banner-entry"><h1>{site.heroTitle}</h1></div></div>
+        <div class="col-lg-5"><div class="banner-form"><ContactForm title="Get A Free Quote" subtitle="Fill out the form and we will call you back" /></div></div>
+      </div></div></div>
+    </div>
+  </div></section>
+  <Sections sections={home.sections} />
+</Base>

@@ -1,0 +1,137 @@
+---
+import { u, fix } from '../lib';
+const { sections = [] } = Astro.props;
+const bs = import.meta.env.BASE_URL;
+const bg = (s) => (s ? `background-image:url('${bs}${s}')` : '');
+---
+{sections.map((s) => {
+  const L = s.layout;
+  return (
+  <Fragment>
+  {L === 'about_section' && (
+    <section class="cp-section about-section bgsection"><div class="inner"><div class="row align-items-lg-center">
+      <div class={'col-lg-6' + (s.image_position === '1' ? ' order-lg-2' : '')}><img src={bs + s.image} class="img-fluid aligncenter" alt={s.title} /></div>
+      <div class="col-lg-6"><div class="section-entry"><div class="cp-title"><h2>{s.title}</h2></div><Fragment set:html={fix(s.content)} /></div></div>
+    </div></div></section>
+  )}
+  {L === 'get_started_section' && (
+    <Fragment>
+    <section class="qta-section cp-section section_bg" style={bg(s.background)}><div class="inner">
+      <div class="cp-title text-center"><h2>{s.title}</h2><div class="subtitle" set:html={fix(s.content)}></div></div>
+      <div class="text-center"><div class="qta-btn text-center">
+        {(s.button || []).map((b) => <a href={u(b.url)} class={'global-btn' + (b.button_style === '1' ? ' btn-solid' : '')}>{b.button_text}</a>)}
+      </div></div>
+    </div></section>
+    {((s.box_section || []).length > 0 || s.additional_title || (s.services || []).length > 0) && (
+    <section class="cp-section negativemargintop nopaddingtop bgsection"><div class="inner">
+      <div class="no-gutters row align-items-lg-stretch">
+        {(s.box_section || []).map((b) => (
+          <div class={'col-lg col-box' + (b.background_type === '1' ? ' col-box-bg' : '')} style={b.background_type === '1' ? `background:url('${bs}${b.image}') no-repeat scroll top center / cover` : ''}>
+            <div class="col-box-entry text-center"><h3>{b.title}</h3><Fragment set:html={fix(b.content)} />
+              <a href={u(b.url)} class={'global-btn' + (b.button_type === '1' ? ' btn-solid' : '') + (b.background_type !== '1' ? ' light' : '')}>{b.button_text}</a></div>
+          </div>
+        ))}
+      </div>
+      {s.additional_title && (
+      <div class="section-more-content"><div class="cp-title"><h2>{s.additional_title}</h2></div>
+        {s.additional_content && <div class="row justify-content-between align-items-center">
+          <div class="col-lg-9"><Fragment set:html={fix(s.additional_content)} /></div>
+          <div class="col-lg-auto"><a href={u(s.additional_url)} class="global-btn">{s.additional_button_text}</a></div></div>}
+      </div>)}
+      <div class="divider"></div>
+      <div class="services-section"><div class="services-info"><div class="row clearfix justify-content-between">
+        {(s.services || []).map((sv) => (
+          <div class="info-block col-xl col-lg-3 col-sm-4 col-6">
+            <a href={u(sv.url)}><div class="icon-box"><img src={bs + sv.image} class="img-fluid" alt={sv.title} /></div></a>
+            <div class="text"><div class="title"><a href={u(sv.url)}>{sv.title}</a></div></div>
+          </div>
+        ))}
+      </div></div></div>
+    </div></section>)}
+    </Fragment>
+  )}
+  {L === 'gallery_section' && (
+    <section class="project-section section_bgdark1">
+      {s.title && <div class="cp-title text-center"><h2>{s.title}</h2></div>}
+      <div class="project-grid">
+        {(s.gallery || []).map((g) => (
+          <div class="project-item"><img src={bs + g} class="img-fluid" alt="" />
+            <a href={bs + g}><div class="overlay-box"><div class="overlay-inner"><div class="content"><span class="icon fa fa-expand"></span></div></div></div></a></div>
+        ))}
+      </div>
+    </section>
+  )}
+  {L === 'testimonial_section' && (
+    <section class="testimonial-section cp-section"><div class="inner">
+      <div class="cp-title text-center"><h2>{s.title}</h2></div>
+      <div class="testimonial-grid">
+        {(s.testimonials || []).map((t) => (
+          <div class="slide-item"><div class="inner-box">
+            <div class="info-outer clearfix"><h2>“</h2><div class="text" set:html={fix(t.content)}></div></div>
+            <figure class="author-image img-circle"><img src={bs + t.image} alt={t.name} /></figure>
+            <div class="author-info"><h4>{t.name}</h4></div>
+          </div></div>
+        ))}
+      </div>
+    </div></section>
+  )}
+  {L === 'counter_section' && (
+    <section class="qta-section cp-section section_bg" style={bg(s.background)}><div class="inner">
+      {s.title && <div class="cp-title text-center"><h2>{s.title}</h2><span>{s.subtitle}</span></div>}
+      <div class="row justify-content-between">
+        {(s.counter || []).map((c) => <div class="col-md"><div class="counter"><i class={'fa ' + c.icon}></i><h3>{c.title}</h3>{c.subtitle}</div></div>)}
+      </div></div></section>
+  )}
+  {L === 'widget_section' && (
+    <section class="qta-section cp-section section_bg" style={bg(s.background)}><div class="inner">
+      {s.title && <div class="cp-title text-center"><h2>{s.title}</h2><span>{s.subtitle}</span></div>}
+      <div class="row justify-content-between">
+        {(s.widget || []).map((c) => <div class="col-md"><div class="widget-lists"><i class={'fa ' + c.icon}></i><h3>{c.title}</h3>{c.subtitle}</div></div>)}
+      </div></div></section>
+  )}
+  {L === 'three_column_section' && (
+    <section class="qta-section cp-section bgcolor"><div class="inner"><div class="row justify-content-between align-items-lg-center">
+      <div class="col-lg-5"><div class="cp-title"><h2>{s.title}</h2><span>{s.subtitle}</span></div></div>
+      <div class="col-lg-7"><div class="row justify-content-between">
+        {(s.column || []).map((c) => <div class="col-md-4"><div class="column-lists"><i class={'fa ' + c.icon}></i><h3>{c.title}</h3>{c.subtitle}</div></div>)}
+      </div></div>
+    </div></div></section>
+  )}
+  {L === 'default_section' && (
+    <section class="cp-section about-section bgsection" style={s.background_color ? `background:${s.background_color}` : ''}><div class="inner"><div class="row align-items-lg-center">
+      <div class="col-lg-auto"><div class="cp-title"><h2>{s.title}</h2></div></div>
+      <div class="col-lg"><div class="section-entry"><Fragment set:html={fix(s.content)} /></div></div>
+    </div></div></section>
+  )}
+  {L === 'services_section' && (
+    <section class="cp-section cp-services-section bgsection"><div class="inner">
+      <div class="cp-title"><h2>{s.title}</h2><Fragment set:html={fix(s.content || s.subtitle)} /></div>
+      <div class="row_wrap">
+        {(s.Services || []).map((sv) => (
+          <div class="col-lg"><div class="cp-services"><div class="services-content">
+            <img src={bs + sv.image} alt={sv.title} />
+            <h4>{sv.url ? <a href={u(sv.url)}>{sv.title}</a> : sv.title}</h4>
+            <Fragment set:html={fix(sv.content)} />
+            {sv.url && <div class="services-btn"><a href={u(sv.url)} class="global-btn btn-solid">Read More</a></div>}
+          </div></div></div>
+        ))}
+      </div></div></section>
+  )}
+  {L === 'masonry_gallery' && (
+    <section class="gallery-section cp-section"><div class="inner">
+      {s.title && <div class="cp-title text-center"><h2>{s.title}</h2></div>}
+      <div class="sortable-masonry mixed-gallery-section">
+        <div class="filters text-center"><ul class="filter-tabs filter-btns button-group clearfix">
+          {(s.gallery || []).map((g, i) => <li class={'filter' + (i === 0 ? ' active' : '')} data-filter={'.gal' + (i + 1)}>{g.title}</li>)}
+        </ul></div>
+        <div class="items-container grid clearfix">
+          {(s.gallery || []).map((g, i) => (g.gallery || []).map((img) => (
+            <div class={'default-portfolio-item masonry-item grid-item col-lg-4 col-md-4 col-6 small-block gal' + (i + 1) + (i === 0 ? '' : ' hidden')}>
+              <div class="inner-box"><figure class="image-box"><img src={bs + img} class="img-fluid" alt={g.title} /></figure></div></div>
+          )))}
+        </div>
+      </div></div></section>
+  )}
+  </Fragment>
+  );
+})}

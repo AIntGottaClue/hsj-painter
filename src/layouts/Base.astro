@@ -1,0 +1,99 @@
+---
+import site from '../data/site.json';
+import { u } from '../lib';
+const { title, description = '', bodyClass = '' } = Astro.props;
+const fullTitle = title && title !== site.name ? `${title} | ${site.name}` : site.name;
+const phoneHref = 'tel:' + (site.phone || '').replace(/[^0-9+]/g, '');
+const bs = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description || site.tagline} />
+  <link rel="icon" href={bs + 'images/favicon.png'} />
+  <link rel="stylesheet" href={bs + 'css/bootstrap.min.css'} />
+  <link rel="stylesheet" href={bs + 'css/bootstrap-grid.min.css'} />
+  <link rel="stylesheet" href={bs + 'css/font-awesome.min.css'} />
+  <link rel="stylesheet" href={bs + 'css/animate.min.css'} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i,800,900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href={bs + 'css/style.css'} />
+  <link rel="stylesheet" href={bs + 'css/custom.css'} />
+  <style set:html={`:root{--brand:${site.brandColor}} ${site.customCss}`}></style>
+</head>
+<body class={bodyClass}>
+<div id="cp-wrapper">
+  <div id="cp-top"><div class="inner"><div class="row align-items-sm-center justify-content-center">
+    <div class="col-sm-3"><a class="cp-logo" href={u('/')}><img src={bs + 'images/logo.png'} alt={site.name} /></a></div>
+    <div class="col-sm-9 col-auto"><div class="row justify-content-end align-items-md-center">
+      <div class="col-sm-auto d-lg-block"><div class="top-item has-divider">
+        <div class="d-inline top-icon"><a href={phoneHref}><i class="fa fa-phone"></i></a></div>
+        <div class="d-inline top-info"><a href={phoneHref}>{site.phone}</a><span>Phone</span></div></div></div>
+      <div class="col-sm-auto d-none d-lg-block"><div class="top-item has-divider">
+        <div class="d-inline top-icon"><a href={'mailto:' + site.email}><i class="fa fa-envelope-open"></i></a></div>
+        <div class="d-inline top-info"><a href={'mailto:' + site.email}>{site.email}</a><span>Email</span></div></div></div>
+      <div class="col-sm-auto d-none d-lg-block"><div class="top-item top-btn"><a href={u('/contact/')}>Get Started <i class="fa fa-angle-right"></i></a></div></div>
+    </div></div>
+  </div></div></div>
+  <header><div id="cp-header"><div class="inner">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <button class="navbar-toggler" type="button" id="navtoggle" aria-label="Menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+      <div class="collapse navbar-collapse" id="mainanv">
+        <ul id="top-menu" class="menu navbar-nav mr-auto">
+          {site.menu.map((m) => (
+            <li class={(m.children && m.children.length ? 'menu-item-has-children ' : '') + (Astro.url.pathname.replace(/\/$/, '') === (import.meta.env.BASE_URL.replace(/\/$/, '') + m.url.replace(/\/$/, '')) ? 'current-menu-item' : '')}>
+              <a href={u(m.url)}>{m.title}</a>
+              {m.children && m.children.length > 0 && (
+                <ul class="sub-menu">{m.children.map((c) => <li><a href={u(c.url)}>{c.title}</a></li>)}</ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  </div></div></header>
+
+  <slot />
+
+  <footer><div id="footer"><div class="inner"><div class="row justify-content-between">
+    <div class="col-lg-5"><div class="footer-widget">
+      <h3>About Us</h3><p>{site.about}</p>
+      <ul class="footer-info">
+        <li><a href={phoneHref}><i class="fa fa-phone"></i> {site.phone}</a></li>
+        <li><a href={'mailto:' + site.email}><i class="fa fa-envelope"></i> {site.email}</a></li>
+        <li><i class="fa fa-map-marker"></i> {site.address}</li>
+      </ul></div></div>
+    <div class="col-lg-auto"><div class="footer-widget"><h3>Services</h3>
+      <ul>{site.servicesMenu.map((m) => <li><a href={u(m.url)}>{m.title}</a></li>)}</ul></div></div>
+    <div class="col-lg-auto"><div class="footer-widget"><h3>Quick Links</h3>
+      <ul>{site.menu.map((m) => <li><a href={u(m.url)}>{m.title}</a></li>)}</ul></div></div>
+    <div class="col-lg-auto"><div class="footer-widget footer-copyright">
+      <a href={u('/')}><img src={bs + 'images/logo.png'} class="img-fluid" alt={site.name} /></a>
+      <p>&copy; {new Date().getFullYear()} {site.name}. All Rights Reserved</p></div></div>
+  </div></div></div></footer>
+</div>
+<script is:inline>
+  document.getElementById('navtoggle')?.addEventListener('click', function () {
+    document.getElementById('mainanv').classList.toggle('show');
+  });
+  document.querySelectorAll('.filter-tabs .filter').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.getAttribute('data-filter').slice(1);
+      document.querySelectorAll('.filter-tabs .filter').forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      document.querySelectorAll('.mixed-gallery-section .grid-item').forEach(function (i) {
+        i.classList.toggle('hidden', !i.classList.contains(f));
+      });
+    });
+  });
+  document.querySelectorAll('.cp-form').forEach(function (f) {
+    f.addEventListener('submit', function (e) {
+      if (!f.getAttribute('action') || f.getAttribute('action') === '#') { e.preventDefault(); f.querySelector('.cp-form-msg').style.display = 'block'; }
+    });
+  });
+</script>
+</body>
+</html>

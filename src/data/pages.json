@@ -1,0 +1,390 @@
+[
+ {
+  "slug": "about",
+  "title": "About",
+  "banner": "",
+  "bg_position": "center",
+  "sections": [
+   {
+    "layout": "about_section",
+    "image": "images/img1@2x.jpg",
+    "image_position": "1",
+    "title": "ABOUT US",
+    "content": "If you are looking for a painter, you are sure to have some questions.\n\nCommon questions from our clients might include:\n<ul>\n \t<li><strong><em>Will the painting company take my insurance?</em></strong></li>\n \t<li><strong><em>How much are your services?</em></strong></li>\n \t<li><strong><em>How long will it take to get the job done?</em></strong></li>\n</ul>\nWhatever the need, our painting experts are eager to provide top-quality service to you in a timely manner!\n\nAll our expert technicians are highly qualified and fully certified. We have many years of combined knowledge and experience in all types of painting and drywall repairs. We are continually keeping up-to-date with the latest materials and trends, so you have peace of mind that our work will add value to your home or business.\n\nCall us today and learn why our customers are truly satisfied and even surprised at how easy and quick the work is done. We’ll work to do everything we can to help you get the best possible outcome!"
+   },
+   {
+    "layout": "counter_section",
+    "background": "images/banner4.jpg",
+    "counter": [
+     {
+      "icon": "fa-trophy",
+      "title": "100s of",
+      "subtitle": "Finished Projects"
+     },
+     {
+      "icon": "fa-thumbs-up",
+      "title": "100s of",
+      "subtitle": "Happy Clients"
+     },
+     {
+      "icon": "fa-certificate",
+      "title": "10+",
+      "subtitle": "Years Experience"
+     },
+     {
+      "icon": "fa-home",
+      "title": "100s of",
+      "subtitle": "Homes Painted"
+     }
+    ],
+    "title": "",
+    "subtitle": ""
+   },
+   {
+    "layout": "default_section",
+    "background_color": "#f7f7f7",
+    "title": "Why Choose Us ",
+    "subtitle": "Popular Questions",
+    "content": "&nbsp;\n<ul>\n \t<li>Financial Responsibility to Our Clients</li>\n \t<li>Superior Quality and Craftsmanship</li>\n \t<li>Quality and Value to the Projects We Deliver</li>\n \t<li>Highest Standards in Cost Control</li>\n \t<li>On Time and on Budget</li>\n \t<li>Real Focus on Customer Satisfaction</li>\n</ul>"
+   },
+   {
+    "layout": "testimonial_section",
+    "title": "Happy Clients",
+    "subtitle": "OUR TESTIMONIALS",
+    "testimonials": [
+     {
+      "name": "Tom G",
+      "image": "images/t2.png",
+      "content": "<p>\"This company was recommended by friends and I have to say they have exceeded every expectation I had for the quality of their work, schedule flexibility, follow-through, accountability.\"</p>"
+     },
+     {
+      "name": "Nick P",
+      "image": "images/t1.png",
+      "content": "<p>\"I can't say enough good things about these guys, they run a great crew and do incredible work! They are very versatile in their knowledge and abilities.\"</p>"
+     }
+    ]
+   }
+  ],
+  "content": ""
+ },
+ {
+  "slug": "services",
+  "title": "Services",
+  "banner": "",
+  "bg_position": "center",
+  "sections": [
+   {
+    "layout": "services_section",
+    "title": "Expert & Professional",
+    "subtitle": "",
+    "Services": [
+     {
+      "image": "images/services2.png",
+      "title": "Exterior Painting",
+      "content": "<p>A fresh coat of paint on the exterior not only makes your home look great, but it can also add value and protection.</p>",
+      "url": "/exterior-painting/"
+     },
+     {
+      "image": "images/services3.png",
+      "title": "Drywall Repair",
+      "content": "<p>Drywall is a popular wall material because it is inexpensive, easy to install and repair.</p>",
+      "url": "/drywall-repairs/"
+     },
+     {
+      "image": "images/services4.png",
+      "title": "Wallpaper Removal",
+      "content": "<p>Wallpaper removal is a tedious and often messy process, but it can be worth it to achieve a fresh look in your home.</p>",
+      "url": "/wallpaper-removal/"
+     },
+     {
+      "image": "images/services1.png",
+      "title": "Commercial Painting",
+      "content": "<p>If you own business or commercial properties, you already know how important it is to protect your investment.</p>",
+      "url": "/commercial-painting/"
+     },
+     {
+      "image": "images/services2.png",
+      "title": "Interior Painting",
+      "content": "<p>Our painters contractors are not only qualified, but fully certified. Our first priority is to provide top-notch services.</p>",
+      "url": "/interior-painting/"
+     },
+     {
+      "image": "images/services3.png",
+      "title": "Clean Up",
+      "content": "<p>Paining can be a messy business, which is why it's important to have a cleaning service come in after the work is done.</p>",
+      "url": "/clean-up/"
+     }
+    ]
+   },
+   {
+    "layout": "three_column_section",
+    "title": "WE ARE THE EXPERT ON THIS FIELD, BETTER BUILDING SOLUTIONS.",
+    "subtitle": "Here, you can easily find best professionals in your area.",
+    "column": [
+     {
+      "icon": "fa-bullseye",
+      "title": "Creative Pre Plannings",
+      "subtitle": ""
+     },
+     {
+      "icon": "fa-users",
+      "title": "Team With Hardwork",
+      "subtitle": ""
+     },
+     {
+      "icon": "fa-trophy",
+      "title": "We Deliver Quality",
+      "subtitle": ""
+     }
+    ]
+   },
+   {
+    "layout": "widget_section",
+    "background": "images/banner4.jpg",
+    "title": "Our Company",
+    "subtitle": "Good buildings come from good people, and all problems are solved by good design",
+    "widget": [
+     {
+      "icon": "fa-building-o",
+      "title": "COMPANY BUILDINGS",
+      "subtitle": ""
+     },
+     {
+      "icon": "fa-home",
+      "title": "HOMES",
+      "subtitle": ""
+     },
+     {
+      "icon": "fa-shopping-basket",
+      "title": "SHOPPING MALLS",
+      "subtitle": ""
+     }
+    ]
+   },
+   {
+    "layout": "gallery_section",
+    "title": "Our Feature Works",
+    "subtitle": "Our Projects",
+    "gallery": []
+   }
+  ],
+  "content": ""
+ },
+ {
+  "slug": "gallery",
+  "title": "Gallery",
+  "banner": "images/banner3.jpg",
+  "bg_position": "center",
+  "sections": [
+   {
+    "layout": "masonry_gallery",
+    "title": "",
+    "subtitle": "",
+    "gallery": [
+     {
+      "title": "Gallery 1",
+      "gallery": [
+       "images/g2.jpg",
+       "images/g3.jpg",
+       "images/g4.jpg",
+       "images/g5.jpg"
+      ]
+     },
+     {
+      "title": "Gallery 2",
+      "gallery": [
+       "images/g2.jpg",
+       "images/g3.jpg",
+       "images/g5.jpg",
+       "images/g6.jpg"
+      ]
+     },
+     {
+      "title": "Gallery 3",
+      "gallery": [
+       "images/g7.jpg",
+       "images/g8.jpg",
+       "images/g6.jpg",
+       "images/g3.jpg"
+      ]
+     }
+    ]
+   }
+  ],
+  "content": ""
+ },
+ {
+  "slug": "contact",
+  "title": "Contact",
+  "banner": "images/banner4.jpg",
+  "bg_position": "center",
+  "sections": [],
+  "content": ""
+ },
+ {
+  "slug": "home",
+  "title": "Home",
+  "banner": "",
+  "bg_position": "center",
+  "sections": [
+   {
+    "layout": "about_section",
+    "image": "images/img2@2x.jpg",
+    "image_position": "0",
+    "title": "What We Do",
+    "content": "We offer a huge variety of paiting services\n<ul>\n \t<li><em>New construction</em></li>\n \t<li><em>Repairs of any kind</em></li>\n \t<li><em>Installation, repair and inspection</em></li>\n</ul>\n\n<hr />\n\n<h3>What Sets Us Apart</h3>\nOur technicians are experts in all areas of painting, from fixing drywalls, to painting interior and exteriors. No matter the size of the job, we’ve got you covered! We will make sure the job is done right the first time."
+   },
+   {
+    "layout": "get_started_section",
+    "title": "Ready To Get Started?",
+    "content": "<p>Contact us now for your FREE initial consultation so we can<br />explain exactly what we can do for you!</p>",
+    "button": [
+     {
+      "button_text": "Schedule A Service",
+      "button_style": "0",
+      "url": "/contact/"
+     },
+     {
+      "button_text": "CALL: (012) 214-5678",
+      "button_style": "1",
+      "url": "tel:(012) 214-5678"
+     }
+    ],
+    "background": "images/pattern.jpg",
+    "box_section": [
+     {
+      "background_type": "1",
+      "image": "images/banner.jpg",
+      "title": "Paiting Service",
+      "content": "<p>We understand what an inconvenience it is to have a messy remodel! Our first priority is quality and to finish as quickly as possible.</p>",
+      "button_type": "0",
+      "button_text": "Read More",
+      "url": "/services/"
+     },
+     {
+      "background_type": "0",
+      "title": "Interior Painting",
+      "content": "<p>Interior painting services are a great way to improve the look of your home without breaking the bank. By hiring a professional painting service, you can get your home looking its best in no time.</p>",
+      "button_type": "1",
+      "button_text": "Read More",
+      "url": "/interior-painting/"
+     }
+    ],
+    "additional_title": "Not Only Qualified, But Fully Certified!",
+    "additional_content": "<p>Certified Painters works diligently to ensure that each project is completed to the customer’s satisfaction. We offer a wide range of services, including residential painting, commercial painting, and industrial painting.</p>",
+    "additional_button_text": "Read More",
+    "additional_url": "/services/",
+    "services": [
+     {
+      "image": "images/icon2.png",
+      "title": "Commercial Painting",
+      "url": "/commercial-painting/"
+     },
+     {
+      "image": "images/icon3.png",
+      "title": "Drywall Repair",
+      "url": "/drywall-repairs/"
+     },
+     {
+      "image": "images/icon4.png",
+      "title": "Clean Up",
+      "url": "/clean-up/"
+     },
+     {
+      "image": "images/icon5.png",
+      "title": "Interior Painting",
+      "url": "/interior-painting/"
+     },
+     {
+      "image": "images/icon6.png",
+      "title": "Exterior Painting",
+      "url": "/exterior-painting/"
+     },
+     {
+      "image": "images/icon1.png",
+      "title": "Wallpaper Removal",
+      "url": "/wallpaper-removal/"
+     }
+    ]
+   },
+   {
+    "layout": "gallery_section",
+    "title": "Our Feature Works",
+    "subtitle": "Our Projects",
+    "gallery": [
+     "images/g6.jpg",
+     "images/g5.jpg",
+     "images/g4.jpg",
+     "images/g3.jpg",
+     "images/gal1.jpg"
+    ]
+   },
+   {
+    "layout": "testimonial_section",
+    "title": "Happy Clients",
+    "subtitle": "OUR TESTIMONIALS",
+    "testimonials": [
+     {
+      "name": "Nick P",
+      "image": "images/t1.png",
+      "content": "<p>\"I can't say enough good things about these guys, they run a great crew and do incredible work! They are very versatile in their knowledge and abilities.\"</p>"
+     },
+     {
+      "name": "Tom G",
+      "image": "images/t2.png",
+      "content": "<p>\"This company was recommended by friends and I have to say they have exceeded every expectation I had for the quality of their work, schedule flexibility, follow-through, accountability.\"</p>"
+     }
+    ]
+   }
+  ],
+  "content": ""
+ },
+ {
+  "slug": "interior-painting",
+  "title": "Interior Painting",
+  "banner": "",
+  "bg_position": "top",
+  "sections": [],
+  "content": "<p class=\"ql-align-center\">Interior painting services are a great way to improve the look of your home without breaking the bank. By hiring a professional painting service, you can get your home looking its best in no time.</p>\n<p class=\"ql-align-center\">There are a few things to keep in mind when choosing a painting service. First, make sure that the company is licensed and insured. This will protect you in case of any accidents or damage.</p>\n<p class=\"ql-align-center\">Also make sure that the company has a good reputation. Ask around to see if anyone has used the service before and what their experience was like. By doing your research, you can be sure to find a painting service that will meet your needs and budget.</p>\n<p class=\"ql-align-center\">So if you're considering a fresh coat of paint for your home, be sure to give interior painting services a try. You won't be disappointed!</p>"
+ },
+ {
+  "slug": "drywall-repairs",
+  "title": "Drywall Repairs",
+  "banner": "",
+  "bg_position": "top",
+  "sections": [],
+  "content": "<p class=\"ql-align-center\">If you are looking to repair or maintain your drywall, then count us amongst the best in town. We have seen and repaired it all from nicks caused by furniture moves to holes that just won't go away on their own!</p>\n<p class=\"ql-align-center\">Our team of specialists are here to help and get the job done quickly, so you can move on with your life.</p>\n<p class=\"ql-align-center\">Drywall is one of the most popular choices for walls in homes today. It is relatively cheap, installs quickly, and is easy to repair. Of course, like anything else in your home, it will require maintenance from time to time.</p>\n<p class=\"ql-align-center\">Drywall can nicks and dings quite easily, so be careful when moving furniture around your home. If you do happen to cause a nick, don't worry! Our team is more than happy to help repair it for you. We have many years of experience in the field and can have your wall looking good as new in no time.</p>\n<p class=\"ql-align-center\">If you have a hole that just won't go away, don't despair! We can help with that too. Depending on the size and severity of the hole, we might be able to patch it up without having to replace the entire sheet of drywall. We will work with you to find the best solution for your specific situation.</p>\n<p class=\"ql-align-center\">So, if you are in need of some drywall repair, don't hesitate to give us a call. We would be happy to help!</p>"
+ },
+ {
+  "slug": "exterior-painting",
+  "title": "Exterior Painting",
+  "banner": "",
+  "bg_position": "top",
+  "sections": [],
+  "content": "<p class=\"ql-align-center\">Exterior house painting is the most effective way to boost the appeal of your house. A fresh coat of paint will make your house look new again and can increase its value by up to 10 percent. The best time to paint your house is in the spring or fall, when the weather is mild.</p>\n<p class=\"ql-align-center\">If you're thinking about painting your house yourself, be sure to read up on the proper techniques. Painting a house is a big job, and it's not as easy as it may seem. You'll need to buy all the necessary supplies, including paint, primer, brushes, and a ladder. You'll also need to be prepared for the hard work involved in painting a house.</p>\n<p class=\"ql-align-center\">If you're not up for the challenge of painting your house yourself, you can always hire a professional painter. A good painter will do a high-quality job and will be able to help you choose the right paint colors for your house.</p>\n<p class=\"ql-align-center\">No matter what you decide, be sure to take your time and make sure the job is done right. A poorly painted house can look worse than no paint at all.</p>\n<p class=\"ql-align-center\">So take your time, do your research, and choose the right painter for the job. Your house will thank you for it!</p>"
+ },
+ {
+  "slug": "wallpaper-removal",
+  "title": "Wallpaper Removal",
+  "banner": "",
+  "bg_position": "top",
+  "sections": [],
+  "content": "<p class=\"ql-align-center\">The amount of time and effort that goes into wall removal is not worth the hassle. It can be difficult to repair if done incorrectly, which means you'll have more work on your hands than necessary! We guarantee great results with our professional service at an affordable price.</p>\n<p class=\"ql-align-center\">Our team of experts have the experience and know-how to handle any wallpaper removal project, big or small. We’ll work diligently to ensure that your walls are free of any leftover adhesive or paper residue, and we’ll take care not to damage your paint or plaster in the process.</p>\n<p class=\"ql-align-center\">This service involves all the necessary steps including:</p>\n<p class=\"ql-align-center\">-Wall preparation</p>\n<p class=\"ql-align-center\">-Adhesive removal</p>\n<p class=\"ql-align-center\">-Paint or plaster repair (if needed)</p>\n<p class=\"ql-align-center\">-Final clean up</p>\n<p class=\"ql-align-center\">We understand that wallpaper removal can be a daunting task, but with our help, it doesn't have to be! Contact us today for a free consultation, and let us take care of everything for you.</p>"
+ },
+ {
+  "slug": "clean-up",
+  "title": "Clean Up",
+  "banner": "",
+  "bg_position": "top",
+  "sections": [],
+  "content": "<p class=\"ql-align-center\">If you are looking for a professional and reliable cleaning service after your painting project, look no further than our team at Cleaning For A Reason. We understand the importance of keeping your home clean and free of any paint fumes or residue, and we are here to help.</p>\n<p class=\"ql-align-center\">We offer comprehensive cleaning services that will get your home back to its pre-painting condition in no time. Our team is experienced and knowledgeable in all aspects of post-painting cleaning, and we will work diligently to ensure that your home is clean and safe.</p>\n<p class=\"ql-align-center\">Don't let the hassle of cleaning up after a painting project get in the way of your enjoyment. Let our team take care of it for you! Contact us today for a free quote.</p>"
+ },
+ {
+  "slug": "commercial-painting",
+  "title": "Commercial Painting",
+  "banner": "",
+  "bg_position": "top",
+  "sections": [],
+  "content": "<p class=\"ql-align-center\">Commercial painting services can help businesses and homeowners achieve the look they desire for their property. Professional painters have the experience and expertise to complete a painting project quickly and efficiently, while ensuring a high level of quality.</p>\n<p class=\"ql-align-center\">Commercial painting services offer a range of benefits for businesses and homeowners. For example, professional painters can help create a custom look for your business or home. They can also complete a painting project quickly and efficiently, while ensuring a high level of quality. Additionally, commercial painting services can help improve the value of your property.</p>\n<p class=\"ql-align-center\">If you’re considering hiring a professional painter for your next project, be sure to consider the many benefits that commercial painting services can offer. Contact a reputable painter today to discuss your needs and get started on your project.</p>"
+ }
+]

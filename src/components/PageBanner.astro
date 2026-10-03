@@ -1,0 +1,6 @@
+---
+const { title, banner = '', pos = 'center' } = Astro.props;
+const bs = import.meta.env.BASE_URL;
+const style = banner ? `background: url('${bs}${banner}') no-repeat scroll ${pos} / cover transparent` : 'background:#212121';
+---
+<div id="page-banner" class={banner ? 'has-banner' : ''} style={style}><div class="inner"><h1>{title}</h1></div></div>

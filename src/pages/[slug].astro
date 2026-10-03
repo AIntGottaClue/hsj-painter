@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import Sections from '../components/Sections.astro';
+import PageBanner from '../components/PageBanner.astro';
+import ContactForm from '../components/ContactForm.astro';
+import pages from '../data/pages.json';
+import { fix } from '../lib';
+export function getStaticPaths() {
+  return pages.filter((p) => p.slug !== 'home').map((p) => ({ params: { slug: p.slug }, props: { page: p } }));
+}
+const { page } = Astro.props;
+const isContact = page.slug === 'contact';
+---
+<Base title={page.title} bodyClass={'page page-' + page.slug}>
+  <PageBanner title={page.title} banner={page.banner} pos={page.bg_position} />
+  {isContact ? (
+    <div id="cp-container" class="cp-section contact-page"><div class="inner"><div class="row no-gutters align-items-stretch contact_row">
+      <div class="col-lg-6 contect-form"><div class="cp-entry"><div class="contact-form"><ContactForm title="Send Us A Message" subtitle="We reply fast" /></div></div></div>
+      <div class="col-lg-6 contect-from-image" style={`background-image:url('${import.meta.env.BASE_URL}${page.banner || 'images/banner.jpg'}');min-height:380px;background-size:cover`}></div>
+    </div></div></div>
+  ) : page.sections && page.sections.length > 0 ? (
+    <Sections sections={page.sections} />
+  ) : (
+    <div id="cp-container" class="cp-section"><div class="inner"><div class="full-content" set:html={fix(page.content)}></div></div></div>
+  )}
+</Base>

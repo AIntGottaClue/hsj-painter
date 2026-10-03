@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import posts from '../../data/posts.json';
+import { fix, u } from '../../lib';
+export function getStaticPaths() {
+  return posts.map((p) => ({ params: { slug: p.slug }, props: { post: p } }));
+}
+const { post } = Astro.props;
+const bs = import.meta.env.BASE_URL;
+---
+<Base title={post.title} description={post.excerpt}>
+  <PageBanner title={post.title} banner="images/banner2.jpg" />
+  <div id="cp-container" class="cp-section"><div class="inner"><div class="full-content">
+    <img src={bs + post.image} alt={post.title} class="img-fluid" style="margin-bottom:20px" />
+    <div set:html={fix(post.content)}></div>
+    <p><a href={u('/blog/')} class="global-btn btn-small">&larr; Back to News</a></p>
+  </div></div></div>
+</Base>

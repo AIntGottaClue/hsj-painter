@@ -1,0 +1,102 @@
+{
+ "name": "Painter Demo",
+ "brandColor": "#c0392b",
+ "tagline": "",
+ "phone": "(012) 214-5678",
+ "email": "info@example.com",
+ "address": "123 Main Street, Your City, ST 00000",
+ "about": "We offer a huge variety of paiting services New construction Repairs of any kind Installation, repair and inspection What Sets Us Apart Our technicians are experts in all areas of painting, from fixing drywalls, to painting interior and exteriors. No",
+ "heroTitle": "Professional Painting Services",
+ "heroImage": "images/banner2.jpg",
+ "formAction": "#",
+ "customCss": "",
+ "menu": [
+  {
+   "title": "Home",
+   "url": "/"
+  },
+  {
+   "title": "About",
+   "url": "/about/"
+  },
+  {
+   "title": "Services",
+   "url": "/services/",
+   "children": [
+    {
+     "title": "Commercial Painting",
+     "url": "/commercial-painting/"
+    },
+    {
+     "title": "Clean Up",
+     "url": "/clean-up/"
+    },
+    {
+     "title": "Wallpaper Removal",
+     "url": "/wallpaper-removal/"
+    },
+    {
+     "title": "Exterior Painting",
+     "url": "/exterior-painting/"
+    },
+    {
+     "title": "Drywall Repairs",
+     "url": "/drywall-repairs/"
+    },
+    {
+     "title": "Interior Painting",
+     "url": "/interior-painting/"
+    }
+   ]
+  },
+  {
+   "title": "Gallery",
+   "url": "/gallery/"
+  },
+  {
+   "title": "News",
+   "url": "/blog/"
+  },
+  {
+   "title": "Contact",
+   "url": "/contact/"
+  }
+ ],
+ "servicesMenu": [
+  {
+   "title": "Commercial Painting",
+   "url": "/commercial-painting/",
+   "order": 1
+  },
+  {
+   "title": "Clean Up",
+   "url": "/clean-up/",
+   "order": 2
+  },
+  {
+   "title": "Wallpaper Removal",
+   "url": "/wallpaper-removal/",
+   "order": 3
+  },
+  {
+   "title": "Exterior Painting",
+   "url": "/exterior-painting/",
+   "order": 4
+  },
+  {
+   "title": "Drywall Repairs",
+   "url": "/drywall-repairs/",
+   "order": 5
+  },
+  {
+   "title": "Interior Painting",
+   "url": "/interior-painting/",
+   "order": 6
+  }
+ ],
+ "blogPage": {
+  "title": "News",
+  "banner": "images/banner2.jpg",
+  "bg_position": "top"
+ }
+}

@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import site from '../../data/site.json';
+import posts from '../../data/posts.json';
+import { u } from '../../lib';
+const bs = import.meta.env.BASE_URL;
+---
+<Base title={site.blogPage.title}>
+  <PageBanner title={site.blogPage.title} banner={site.blogPage.banner} pos={site.blogPage.bg_position} />
+  <div id="cp-container" class="cp-section"><div class="inner"><div class="blog-grid">
+    {posts.map((p) => (
+      <div class="blog-item">
+        <div class="blog-img"><a href={u('/blog/' + p.slug + '/')}><img src={bs + p.image} alt={p.title} class="img-fluid" /></a></div>
+        <div class="blog-entry"><h3><a href={u('/blog/' + p.slug + '/')}>{p.title}</a></h3><p>{p.excerpt}</p>
+          <a href={u('/blog/' + p.slug + '/')} class="global-btn btn-small">Read More</a></div>
+      </div>
+    ))}
+  </div></div></div>
+</Base>
